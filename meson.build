@@ -19,7 +19,9 @@ if target_machine.system() == 'windows'
   add_global_arguments('-DNOMINMAX', language: 'cpp')
 endif
 simdutf = dependency('simdutf')
-arrow = dependency('arrow')
+#arrow = dependency('arrow') # ubuntu
+arrow = dependency('arrow', method : 'cmake', modules : ['Arrow::arrow_shared']) # windows
+
 build_testing = get_option('build_testing')
 if build_testing
   gtest = dependency('gtest')
