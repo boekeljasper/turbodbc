@@ -47,8 +47,10 @@ for the latest turbodbc talk and news about related technologies.
 run this to make vcpkg available
 $ENV:path += ";C:\Users\Boekel\Downloads\vcpkg\installed\x64-windows"
 
-run this to create tag and commit
+change version in pyproject.toml
+add tag:
 git tag -a v1.0.0 -m "My release version 1.0.0" ; git add .  ; git commit -m " commit tag "
+then add and commit these changes to have a new version
 
 run this to build package
 
